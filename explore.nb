@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     28844,        617]
-NotebookOptionsPosition[     27552,        577]
-NotebookOutlinePosition[     27897,        592]
-CellTagsIndexPosition[     27854,        589]
+NotebookDataLength[     85704,       1784]
+NotebookOptionsPosition[     82720,       1702]
+NotebookOutlinePosition[     83065,       1717]
+CellTagsIndexPosition[     83022,       1714]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -556,27 +556,1152 @@ fa5d71b301d8"]
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], "[", 
-  "\"\<Bristol, UK\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.7022083232921596`*^9, 
-  3.702208324027746*^9}},ExpressionUUID->"c1367172-a268-4fe1-a778-\
-c1f39a810db9"],
+  RowBox[{"request", "=", 
+   RowBox[{
+   "HTTPRequest", "[", "\"\<http://api.postcodes.io/random/postcodes\>\"", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022108170128803`*^9, 
+  3.702210824748201*^9}},ExpressionUUID->"132d991d-d875-418a-b0bf-\
+5788463b2ef3"],
 
 Cell[BoxData[
- RowBox[{"GeoPosition", "[", 
-  RowBox[{"{", 
-   RowBox[{"51.45`", ",", 
-    RowBox[{"-", "2.5833333`"}]}], "}"}], "]"}]], "Output",
- CellChangeTimes->{{3.702208320642332*^9, 
-  3.7022083275602655`*^9}},ExpressionUUID->"09a40982-75fa-46d3-9ace-\
-c481aba0489a"]
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"N21 2RP\"\>"}], ",", 
+      RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+      RowBox[{"\<\"eastings\"\>", "\[Rule]", "532348"}], ",", 
+      RowBox[{"\<\"northings\"\>", "\[Rule]", "194664"}], ",", 
+      RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+      RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"London\"\>"}], ",", 
+      RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+       RowBox[{"-", "0.0890259431040139`"}]}], ",", 
+      RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6352225985631`"}], ",", 
+      RowBox[{"\<\"parliamentary_constituency\"\>", 
+       "\[Rule]", "\<\"Edmonton\"\>"}], ",", 
+      RowBox[{"\<\"european_electoral_region\"\>", 
+       "\[Rule]", "\<\"London\"\>"}], ",", 
+      RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Enfield\"\>"}], 
+      ",", 
+      RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"London\"\>"}], ",", 
+      RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Enfield 021D\"\>"}], ",", 
+      RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Enfield 021\"\>"}], ",", 
+      RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"2RP\"\>"}], ",", 
+      RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"N21\"\>"}], ",", 
+      RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"Enfield\"\>"}], ",", 
+      RowBox[{"\<\"parish\"\>", 
+       "\[Rule]", "\<\"Enfield, unparished area\"\>"}], ",", 
+      RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+      RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Bush Hill Park\"\>"}], 
+      ",", 
+      RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Enfield\"\>"}], ",", 
+      RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Enfield\"\>"}], ",", 
+      RowBox[{"\<\"codes\"\>", "\[Rule]", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E09000010\"\>"}], 
+         ",", 
+         RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+         ",", 
+         RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05000194\"\>"}], ",", 
+         RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000200\"\>"}], ",", 
+         RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000057\"\>"}], ",", 
+         RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKI54\"\>"}]}], 
+        "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.702210826657588*^9, 
+  3.702210836038561*^9}},ExpressionUUID->"e89882f7-ec96-4ebc-a1d9-\
+d76c8b4f9274"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49 5NU\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/postcodes/\>\"", "<>", "code", "<>", 
+     "\"\</validate\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022108555976305`*^9}},ExpressionUUID->"61cfcdce-722e-4703-9566-\
+e3c16095e360"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", "True"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.702210857489369*^9},ExpressionUUID->"95f8dfa1-ba01-4243-ba60-\
+69c3f67221c1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49 5NU\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/postcodes/\>\"", "<>", "code", "<>", 
+     "\"\</nearest\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022108717884817`*^9}},ExpressionUUID->"81813939-363b-49e9-a0f7-\
+da8cd629d5f4"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NU\"\>"}], ",", 
+       RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+       RowBox[{"\<\"eastings\"\>", "\[Rule]", "464440"}], ",", 
+       RowBox[{"\<\"northings\"\>", "\[Rule]", "195671"}], ",", 
+       RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+       RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+       RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+        RowBox[{"-", "1.06986930435083`"}]}], ",", 
+       RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.656143706615`"}], ",", 
+       RowBox[{"\<\"parliamentary_constituency\"\>", 
+        "\[Rule]", "\<\"Henley\"\>"}], ",", 
+       RowBox[{"\<\"european_electoral_region\"\>", 
+        "\[Rule]", "\<\"South East\"\>"}], ",", 
+       RowBox[{"\<\"primary_care_trust\"\>", 
+        "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+       RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+       RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011B\"\>"}], 
+       ",", 
+       RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011\"\>"}], 
+       ",", 
+       RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NU\"\>"}], ",", 
+       RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+       RowBox[{"\<\"distance\"\>", "\[Rule]", "0"}], ",", 
+       RowBox[{"\<\"admin_district\"\>", 
+        "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+       RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Brightwell Baldwin\"\>"}], 
+       ",", 
+       RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+       ",", 
+       RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Chalgrove\"\>"}], ",", 
+       RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+       RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+       RowBox[{"\<\"codes\"\>", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}], 
+          ",", 
+          RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+          ",", 
+          RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009735\"\>"}], ",", 
+          RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008109\"\>"}], ",", 
+          RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+          RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+         "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.702210872822008*^9},ExpressionUUID->"687b7211-84e8-4d90-8c01-\
+60d38c8c04ab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49 5N\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/postcodes/\>\"", "<>", "code", "<>", 
+     "\"\</autocomplete\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022108969887705`*^9}},ExpressionUUID->"cdc8a86b-09bb-4401-b658-\
+94297cc74283"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"OX49 5NA\"\>", ",", "\<\"OX49 5NB\"\>", 
+      ",", "\<\"OX49 5ND\"\>", ",", "\<\"OX49 5NE\"\>", 
+      ",", "\<\"OX49 5NF\"\>", ",", "\<\"OX49 5NG\"\>", 
+      ",", "\<\"OX49 5NH\"\>", ",", "\<\"OX49 5NJ\"\>", 
+      ",", "\<\"OX49 5NL\"\>", ",", "\<\"OX49 5NN\"\>"}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7022108985943437`*^9},ExpressionUUID->"0d70b82e-3182-471e-afd6-\
+8c08dcc15f93"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49 5N\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"\"\<http://api.postcodes.io/postcodes?q=\>\"", "<>", 
+     RowBox[{"URLEncode", "[", "code", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022109232522945`*^9}, {3.70221095782084*^9, 
+  3.7022109636450043`*^9}},ExpressionUUID->"e36fdf1b-cdf4-48a8-be1f-\
+b432f01f77bc"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NA\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "467806"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "194989"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.02135072044629`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6496172251885`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008C\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NA\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04012498\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NB\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "467990"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195019"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.01868583857097`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6498647345617`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008C\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NB\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04012498\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5ND\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "467222"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195278"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.02973491112809`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6522853421337`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008C\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5ND\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04012498\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NE\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466890"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195343"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.0345206696538`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6529092304551`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NE\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NF\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466746"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195275"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.03661479134052`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6523150033816`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NF\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NG\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466575"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195197"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.03910096758646`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6516340321899`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NG\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NH\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466448"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195363"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.04090490098886`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6531413693414`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NH\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NJ\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466372"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195359"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.04200405870543`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6531143740771`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NJ\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NL\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "466345"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195330"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.04239977223281`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6528568472402`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 008\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NL\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Cuxham with Easington\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Watlington\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009751\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008121\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NN\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "465848"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "195134"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "1.04961953979609`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6511531551262`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Henley\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", 
+         "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011B\"\>"}],
+         ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011\"\>"}], 
+        ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NN\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Brightwell Baldwin\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], 
+        ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Chalgrove\"\>"}], ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009735\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008109\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.7022109247336235`*^9, 
+  3.702210964347926*^9}},ExpressionUUID->"f5728073-abf2-4f6a-bb9d-\
+e4ec2fb27b89"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"\"\<http://api.postcodes.io/outcodes/\>\"", "<>", "code"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022109232522945`*^9}, {3.70221095782084*^9, 
+  3.7022110005881057`*^9}},ExpressionUUID->"58a80edd-acdb-40e7-a499-\
+9f52d3b205a0"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+      RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+       RowBox[{"-", "1.00138624438577`"}]}], ",", 
+      RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6503946766344`"}], ",", 
+      RowBox[{"\<\"northings\"\>", "\[Rule]", "195094"}], ",", 
+      RowBox[{"\<\"eastings\"\>", "\[Rule]", "469185"}], ",", 
+      RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+       RowBox[{"{", "\<\"South Oxfordshire\"\>", "}"}]}], ",", 
+      RowBox[{"\<\"parish\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Pishill with Stonor\"\>", 
+         ",", "\<\"Brightwell Baldwin\"\>", ",", "\<\"Aston Rowant\"\>", 
+         ",", "\<\"Shirburn\"\>", ",", "\<\"Watlington\"\>", 
+         ",", "\<\"Ewelme\"\>", ",", "\<\"Pyrton\"\>", 
+         ",", "\<\"Britwell Salome\"\>", ",", "\<\"Lewknor\"\>", 
+         ",", "\<\"Cuxham with Easington\"\>", ",", "\<\"Swyncombe\"\>", 
+         ",", "\<\"Stoke Talmage\"\>"}], "}"}]}], ",", 
+      RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+       RowBox[{"{", "\<\"Oxfordshire\"\>", "}"}]}], ",", 
+      RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Haseley Brook\"\>", ",", "\<\"Chalgrove\"\>", 
+         ",", "\<\"Watlington\"\>", ",", "\<\"Chinnor\"\>", 
+         ",", "\<\"Benson & Crowmarsh\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7022110032207212`*^9},ExpressionUUID->"6c451b2b-5ef3-4554-8ef9-\
+b250395609bb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/outcodes/\>\"", "<>", "code", "<>", 
+     "\"\</nearest\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022109232522945`*^9}, {3.70221095782084*^9, 
+  3.702211023621707*^9}},ExpressionUUID->"1b6bd7b1-962b-495f-9c2e-\
+5c3c90ec0bec"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+       RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+        RowBox[{"-", "1.00138624438577`"}]}], ",", 
+       RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.6503946766344`"}], ",", 
+       RowBox[{"\<\"northings\"\>", "\[Rule]", "195094"}], ",", 
+       RowBox[{"\<\"eastings\"\>", "\[Rule]", "469185"}], ",", 
+       RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+        RowBox[{"{", "\<\"South Oxfordshire\"\>", "}"}]}], ",", 
+       RowBox[{"\<\"parish\"\>", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\<\"Pishill with Stonor\"\>", 
+          ",", "\<\"Brightwell Baldwin\"\>", ",", "\<\"Aston Rowant\"\>", 
+          ",", "\<\"Shirburn\"\>", ",", "\<\"Watlington\"\>", 
+          ",", "\<\"Ewelme\"\>", ",", "\<\"Pyrton\"\>", 
+          ",", "\<\"Britwell Salome\"\>", ",", "\<\"Lewknor\"\>", 
+          ",", "\<\"Cuxham with Easington\"\>", ",", "\<\"Swyncombe\"\>", 
+          ",", "\<\"Stoke Talmage\"\>"}], "}"}]}], ",", 
+       RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+        RowBox[{"{", "\<\"Oxfordshire\"\>", "}"}]}], ",", 
+       RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\<\"Haseley Brook\"\>", ",", "\<\"Chalgrove\"\>", 
+          ",", "\<\"Watlington\"\>", ",", "\<\"Chinnor\"\>", 
+          ",", "\<\"Benson & Crowmarsh\"\>"}], "}"}]}], ",", 
+       RowBox[{"\<\"distance\"\>", "\[Rule]", "0"}]}], 
+      "\[RightAssociation]"}], "}"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7022110241741753`*^9},ExpressionUUID->"ed2a1907-1f82-43ab-8aa1-\
+ebfeb41455c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"location", "=", 
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], "[", 
+    "\"\<Bristol, UK\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"lat", ",", "lon"}], "}"}], "=", 
+   RowBox[{"ToString", "/@", 
+    RowBox[{"QuantityMagnitude", "[", 
+     RowBox[{"LatitudeLongitude", "[", "location", "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/outcodes?lon=\>\"", "<>", "lon", "<>", 
+     "\"\<&lat=\>\"", "<>", "lat"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022074419298186`*^9}, {3.7022108524200315`*^9, 
+  3.7022109232522945`*^9}, {3.70221095782084*^9, 
+  3.7022111010522327`*^9}},ExpressionUUID->"1dccb785-602a-4195-943c-\
+683641269ac7"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS99\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58764814017408`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4500382913063`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172502"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359260"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\<\"Lawrence Hill\"\>", ",", "\<\"Bishopsworth\"\>"}], 
+          "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "300.211981993`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.59327069116631`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4535484285391`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172896"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "358873"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Cotham\"\>", ",", "\<\"Central\"\>", 
+           ",", "\<\"Avonmouth and Lawrence Weston\"\>", 
+           ",", "\<\"Ashley\"\>", ",", "\<\"Lawrence Hill\"\>", 
+           ",", "\<\"Hotwells and Harbourside\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "795.838355213`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS98\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.5791005891763`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4588876242826`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "173482"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359862"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\<\"Ashley\"\>", ",", "\<\"Lawrence Hill\"\>"}], "}"}]}], 
+        ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "1031.587465265`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS2\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58182863714961`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4599611961308`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "173603"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359673"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Cotham\"\>", ",", "\<\"Central\"\>", 
+           ",", "\<\"Southville\"\>", ",", "\<\"Ashley\"\>", 
+           ",", "\<\"Lockleaze\"\>", ",", "\<\"Lawrence Hill\"\>"}], "}"}]}], 
+        ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "1113.155117756`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS3\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.60312093643546`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4385878760105`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "171238"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "358175"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\<\"Bristol, City of\"\>", ",", "\<\"North Somerset\"\>"}],
+           "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Bristol, City of, unparished area\"\>", 
+           ",", "\<\"Long Ashton\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Bedminster\"\>", ",", "\<\"Southville\"\>", 
+           ",", "\<\"Knowle\"\>", ",", "\<\"Filwood\"\>", 
+           ",", "\<\"Long Ashton\"\>", ",", "\<\"Windmill Hill\"\>", 
+           ",", "\<\"Bishopsworth\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "1872.261761668`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS4\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.56320075557599`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4354483308552`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "170866"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "360946"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Southville\"\>", ",", "\<\"Knowle\"\>", 
+           ",", "\<\"Filwood\"\>", ",", "\<\"Brislington West\"\>", 
+           ",", "\<\"Brislington East\"\>", ",", "\<\"Stockwood\"\>", 
+           ",", "\<\"Windmill Hill\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "2140.039798808`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS5\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.55186096702319`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4620180509913`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "173815"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "361757"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"St George West\"\>", ",", "\<\"St George Central\"\>", 
+           ",", "\<\"St George Troopers Hill\"\>", ",", "\<\"Eastville\"\>", 
+           ",", "\<\"Lockleaze\"\>", ",", "\<\"Lawrence Hill\"\>", 
+           ",", "\<\"Clifton Down\"\>", ",", "\<\"Easton\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "2563.634871642`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS6\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.60037082304239`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4707574190224`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "174814"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "358395"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of\"\>", "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", "\<\"Bristol, City of, unparished area\"\>", "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Cotham\"\>", ",", "\<\"Central\"\>", 
+           ",", "\<\"Bishopston and Ashley Down\"\>", ",", "\<\"Ashley\"\>", 
+           ",", "\<\"Westbury-on-Trym and Henleaze\"\>", 
+           ",", "\<\"Clifton Down\"\>", ",", "\<\"Redland\"\>"}], "}"}]}], 
+        ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "2595.391447821`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS8\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.62199449515345`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4575695266328`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "173360"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "356881"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\<\"Bristol, City of\"\>", ",", "\<\"North Somerset\"\>"}],
+           "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Wraxall and Failand\"\>", 
+           ",", "\<\"Bristol, City of, unparished area\"\>", 
+           ",", "\<\"Portbury\"\>", ",", "\<\"Abbots Leigh\"\>", 
+           ",", "\<\"Pill and Easton-in-Gordano\"\>", 
+           ",", "\<\"Long Ashton\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Central\"\>", ",", "\<\"Pill\"\>", 
+           ",", "\<\"Clifton\"\>", ",", "\<\"Long Ashton\"\>", 
+           ",", "\<\"Gordano Valley\"\>", 
+           ",", "\<\"Hotwells and Harbourside\"\>", 
+           ",", "\<\"Clifton Down\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "2816.454464922`"}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS7\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58147125071593`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4869584242641`"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "176605"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359722"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Bristol, City of\"\>", 
+           ",", "\<\"South Gloucestershire\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"parish\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Bristol, City of, unparished area\"\>", 
+           ",", "\<\"Stoke Gifford\"\>", ",", "\<\"Filton\"\>"}], "}"}]}], 
+        ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", 
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"Bishopston and Ashley Down\"\>", 
+           ",", "\<\"Horfield\"\>", ",", "\<\"Ashley\"\>", 
+           ",", "\<\"Frenchay and Stoke Park\"\>", ",", "\<\"Lockleaze\"\>", 
+           ",", "\<\"Filton\"\>", ",", "\<\"Redland\"\>"}], "}"}]}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "4113.920082394`"}]}], 
+       "\[RightAssociation]"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7022111068170805`*^9},ExpressionUUID->"3074e55d-2019-4075-b03f-\
+c7ca76bbe8a9"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{759, 753},
-WindowMargins->{{Automatic, 413}, {104, Automatic}},
+WindowMargins->{{477, Automatic}, {Automatic, 101}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -613,10 +1738,52 @@ Cell[13676, 317, 13278, 236, 886, "Output", "ExpressionUUID" -> \
 "3c163bbc-9a6a-4fb7-bd90-fa5d71b301d8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26991, 558, 256, 6, 30, "Input", "ExpressionUUID" -> \
-"c1367172-a268-4fe1-a778-c1f39a810db9"],
-Cell[27250, 566, 274, 7, 30, "Output", "ExpressionUUID" -> \
-"09a40982-75fa-46d3-9ace-c481aba0489a"]
+Cell[26991, 558, 567, 15, 69, "Input", "ExpressionUUID" -> \
+"132d991d-d875-418a-b0bf-5788463b2ef3"],
+Cell[27561, 575, 2672, 50, 183, "Output", "ExpressionUUID" -> \
+"e89882f7-ec96-4ebc-a1d9-d76c8b4f9274"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30270, 630, 810, 19, 88, "Input", "ExpressionUUID" -> \
+"61cfcdce-722e-4703-9566-e3c16095e360"],
+Cell[31083, 651, 304, 8, 30, "Output", "ExpressionUUID" -> \
+"95f8dfa1-ba01-4243-ba60-69c3f67221c1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31424, 664, 809, 19, 88, "Input", "ExpressionUUID" -> \
+"81813939-363b-49e9-a0f7-da8cd629d5f4"],
+Cell[32236, 685, 2857, 55, 202, "Output", "ExpressionUUID" -> \
+"687b7211-84e8-4d90-8c01-60d38c8c04ab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35130, 745, 813, 19, 88, "Input", "ExpressionUUID" -> \
+"cdc8a86b-09bb-4401-b658-94297cc74283"],
+Cell[35946, 766, 612, 14, 50, "Output", "ExpressionUUID" -> \
+"0d70b82e-3182-471e-afd6-8c08dcc15f93"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36595, 785, 865, 20, 88, "Input", "ExpressionUUID" -> \
+"e36fdf1b-cdf4-48a8-be1f-b432f01f77bc"],
+Cell[37463, 807, 25739, 467, 1741, "Output", "ExpressionUUID" -> \
+"f5728073-abf2-4f6a-bb9d-e4ec2fb27b89"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63239, 1279, 822, 19, 88, "Input", "ExpressionUUID" -> \
+"58a80edd-acdb-40e7-a499-9f52d3b205a0"],
+Cell[64064, 1300, 1723, 34, 126, "Output", "ExpressionUUID" -> \
+"6c451b2b-5ef3-4554-8ef9-b250395609bb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65824, 1339, 852, 20, 88, "Input", "ExpressionUUID" -> \
+"1b6bd7b1-962b-495f-9c2e-5c3c90ec0bec"],
+Cell[66679, 1361, 1834, 36, 145, "Output", "ExpressionUUID" -> \
+"ed2a1907-1f82-43ab-8aa1-ebfeb41455c5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68550, 1402, 1223, 31, 107, "Input", "ExpressionUUID" -> \
+"1dccb785-602a-4195-943c-683641269ac7"],
+Cell[69776, 1435, 12916, 263, 943, "Output", "ExpressionUUID" -> \
+"3074e55d-2019-4075-b03f-c7ca76bbe8a9"]
 }, Open  ]]
 }, Open  ]]
 }
