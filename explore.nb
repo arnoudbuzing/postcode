@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13353,        312]
-NotebookOptionsPosition[     12542,        284]
-NotebookOutlinePosition[     12886,        299]
-CellTagsIndexPosition[     12843,        296]
+NotebookDataLength[     28844,        617]
+NotebookOptionsPosition[     27552,        577]
+NotebookOutlinePosition[     27897,        592]
+CellTagsIndexPosition[     27854,        589]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -279,11 +279,304 @@ Cell[BoxData[
    3.702207741627691*^9}, 3.7022078729011517`*^9, {3.7022079748751307`*^9, 
    3.702207987938614*^9}},ExpressionUUID->"4a602897-2011-412a-b0a2-\
 a310be614069"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"location", "=", 
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], "[", 
+    "\"\<Bristol, UK\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"lat", ",", "lon"}], "}"}], "=", 
+   RowBox[{"ToString", "/@", 
+    RowBox[{"QuantityMagnitude", "[", 
+     RowBox[{"LatitudeLongitude", "[", "location", "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{
+    "\"\<http://api.postcodes.io/postcodes?lon=\>\"", "<>", "lon", "<>", 
+     "\"\<&lat=\>\"", "<>", "lat"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.702208290971637*^9, 3.7022083880762415`*^9}, {
+  3.7022084227641354`*^9, 
+  3.7022085216677985`*^9}},ExpressionUUID->"ff794939-37ba-4a9f-abe9-\
+7942364efec0"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"BS1 6EH\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359564"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172519"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58328622171737`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4502066371355`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Bristol West\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Bristol\"\>"}], 
+        ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Bristol 054B\"\>"}], ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Bristol 054\"\>"}], ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"6EH\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "23.190359235`"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Bristol, City of, unparished area\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Lawrence Hill\"\>"}], 
+        ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Bristol\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E06000023\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05010907\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000019\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000022\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKK11\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"BS1 6EL\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359564"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172519"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58328622171737`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4502066371355`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Bristol West\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Bristol\"\>"}], 
+        ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Bristol 054B\"\>"}], ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Bristol 054\"\>"}], ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"6EL\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "23.190359235`"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Bristol, City of, unparished area\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Lawrence Hill\"\>"}], 
+        ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Bristol\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E06000023\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05010907\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000019\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000022\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKK11\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"BS1 6EW\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359509"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172523"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.5840781161287`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4502386610459`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Bristol West\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Bristol\"\>"}], 
+        ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Bristol 054B\"\>"}], ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Bristol 054\"\>"}], ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"6EW\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "58.392602923`"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Bristol, City of, unparished area\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Lawrence Hill\"\>"}], 
+        ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Bristol\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E06000023\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05010907\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000019\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000022\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKK11\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"BS1 6EA\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359624"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172537"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.5824248976811`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4503727689882`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Bristol West\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Bristol\"\>"}], 
+        ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Bristol 054B\"\>"}], ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Bristol 054\"\>"}], ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"6EA\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "75.358166875`"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Bristol, City of, unparished area\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Lawrence Hill\"\>"}], 
+        ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Bristol\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E06000023\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05010907\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000019\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000022\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKK11\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"BS1 6QH\"\>"}], ",", 
+        RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+        RowBox[{"\<\"eastings\"\>", "\[Rule]", "359596"}], ",", 
+        RowBox[{"\<\"northings\"\>", "\[Rule]", "172411"}], ",", 
+        RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+        RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+         RowBox[{"-", "2.58281338121889`"}]}], ",", 
+        RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.4492378911384`"}], ",", 
+        RowBox[{"\<\"parliamentary_constituency\"\>", 
+         "\[Rule]", "\<\"Bristol West\"\>"}], ",", 
+        RowBox[{"\<\"european_electoral_region\"\>", 
+         "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"primary_care_trust\"\>", "\[Rule]", "\<\"Bristol\"\>"}], 
+        ",", 
+        RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South West\"\>"}], ",", 
+        RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Bristol 054B\"\>"}], ",", 
+        RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Bristol 054\"\>"}], ",", 
+        RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"6QH\"\>"}], ",", 
+        RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"BS1\"\>"}], ",", 
+        RowBox[{"\<\"distance\"\>", "\[Rule]", "92.082139876`"}], ",", 
+        RowBox[{"\<\"admin_district\"\>", 
+         "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"parish\"\>", 
+         "\[Rule]", "\<\"Bristol, City of, unparished area\"\>"}], ",", 
+        RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+        RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Lawrence Hill\"\>"}], 
+        ",", 
+        RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Bristol\"\>"}], ",", 
+        RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Bristol, City of\"\>"}], ",", 
+        RowBox[{"\<\"codes\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E06000023\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E99999999\"\>"}], 
+           ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05010907\"\>"}], 
+           ",", 
+           RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000019\"\>"}], ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000022\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKK11\"\>"}]}], 
+          "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.7022083902973022`*^9, 3.702208431825923*^9, 
+  3.702208463937908*^9, 
+  3.7022085240302362`*^9},ExpressionUUID->"3c163bbc-9a6a-4fb7-bd90-\
+fa5d71b301d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], "[", 
+  "\"\<Bristol, UK\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7022083232921596`*^9, 
+  3.702208324027746*^9}},ExpressionUUID->"c1367172-a268-4fe1-a778-\
+c1f39a810db9"],
+
+Cell[BoxData[
+ RowBox[{"GeoPosition", "[", 
+  RowBox[{"{", 
+   RowBox[{"51.45`", ",", 
+    RowBox[{"-", "2.5833333`"}]}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{{3.702208320642332*^9, 
+  3.7022083275602655`*^9}},ExpressionUUID->"09a40982-75fa-46d3-9ace-\
+c481aba0489a"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{759, 753},
-WindowMargins->{{208, Automatic}, {62, Automatic}},
+WindowMargins->{{Automatic, 413}, {104, Automatic}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -312,6 +605,18 @@ Cell[4320, 107, 1661, 40, 164, "Input", "ExpressionUUID" -> \
 "1187fa8b-bb3c-4697-bc00-d005d281a8fd"],
 Cell[5984, 149, 6530, 131, 392, "Output", "ExpressionUUID" -> \
 "4a602897-2011-412a-b0a2-a310be614069"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12551, 285, 1122, 30, 107, "Input", "ExpressionUUID" -> \
+"ff794939-37ba-4a9f-abe9-7942364efec0"],
+Cell[13676, 317, 13278, 236, 886, "Output", "ExpressionUUID" -> \
+"3c163bbc-9a6a-4fb7-bd90-fa5d71b301d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26991, 558, 256, 6, 30, "Input", "ExpressionUUID" -> \
+"c1367172-a268-4fe1-a778-c1f39a810db9"],
+Cell[27250, 566, 274, 7, 30, "Output", "ExpressionUUID" -> \
+"09a40982-75fa-46d3-9ace-c481aba0489a"]
 }, Open  ]]
 }, Open  ]]
 }
