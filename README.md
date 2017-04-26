@@ -9,9 +9,27 @@ For usage examples, open the usage.nb notebook
 Code examples:
 
 ~~~~
-postcode["OX49 5NU"] 
+postcodes["OX49 5NU"] 
 
-postcode[{"OX49 5NU", "M32 0JG", "NE30 1DP"}]
+postcodes[{"OX49 5NU", "M32 0JG", "NE30 1DP"}]
 
-postcode[ GeoPosition[{51.45, -2.58333}] ]
+postcodes[ GeoPosition[{51.45, -2.58333}] ]
+
+postcodes[ {GeoPosition[{51.45, -2.58333}], GeoPosition[{51.45, -2.58333}]} ]
+
+postcodes["Random"]
+
+postcodes["OX49 5NU", "Validate"]
+
+postcodes["OX49 5NU", "Nearest"]
+
+postcodes["OX49 5", "Autocomplete"]
+
+postcodes["OX49 5NU", "Query"]
+
+outcodes["OX49"]
+
+outcodes["OX49", "Nearest"]
+
+outcodes[ GeoPosition[{51.45, -2.58333}] ]
 ~~~~
