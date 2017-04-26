@@ -1,0 +1,320 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13353,        312]
+NotebookOptionsPosition[     12542,        284]
+NotebookOutlinePosition[     12886,        299]
+CellTagsIndexPosition[     12843,        296]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["postcode", "Title",
+ CellChangeTimes->{{3.7022074303212767`*^9, 
+  3.702207431209073*^9}},ExpressionUUID->"22a31bd6-37d0-4c13-8010-\
+854f1777f1d2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"code", "=", "\"\<OX49 5NU\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"\"\<http://api.postcodes.io/postcodes/\>\"", "<>", "code"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 
+  3.7022074419298186`*^9}},ExpressionUUID->"aa0544f7-e2da-4ac9-94ca-\
+a23cb148b75f"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NU\"\>"}], ",", 
+      RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+      RowBox[{"\<\"eastings\"\>", "\[Rule]", "464440"}], ",", 
+      RowBox[{"\<\"northings\"\>", "\[Rule]", "195671"}], ",", 
+      RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+      RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], ",", 
+      RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+       RowBox[{"-", "1.06986930435083`"}]}], ",", 
+      RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.656143706615`"}], ",", 
+      RowBox[{"\<\"parliamentary_constituency\"\>", 
+       "\[Rule]", "\<\"Henley\"\>"}], ",", 
+      RowBox[{"\<\"european_electoral_region\"\>", 
+       "\[Rule]", "\<\"South East\"\>"}], ",", 
+      RowBox[{"\<\"primary_care_trust\"\>", 
+       "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+      RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+      RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011B\"\>"}], 
+      ",", 
+      RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"South Oxfordshire 011\"\>"}], 
+      ",", 
+      RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NU\"\>"}], ",", 
+      RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+      RowBox[{"\<\"admin_district\"\>", 
+       "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+      RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"Brightwell Baldwin\"\>"}], 
+      ",", 
+      RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+      RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Chalgrove\"\>"}], ",", 
+      RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+      RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+      RowBox[{"\<\"codes\"\>", "\[Rule]", 
+       RowBox[{"\[LeftAssociation]", 
+        RowBox[{
+         RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"E07000179\"\>"}], 
+         ",", 
+         RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"E10000025\"\>"}], 
+         ",", 
+         RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009735\"\>"}], ",", 
+         RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008109\"\>"}], ",", 
+         RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+         RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+        "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.702206704281006*^9, {3.7022067372149415`*^9, 3.702206793967951*^9}, 
+   3.702207442908672*^9},ExpressionUUID->"b0811946-5d35-4739-93c0-\
+9038a6659d92"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"codes", "=", 
+   RowBox[{"{", 
+    RowBox[{"\"\<OX49 5NU\>\"", ",", "\"\<M32 0JG\>\""}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"request", "=", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"\"\<http://api.postcodes.io/postcodes\>\"", ",", 
+     RowBox[{"<|", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Method", "\[Rule]", "\"\<POST\>\""}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<Body\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<postcodes\>\"", "\[Rule]", "codes"}], "}"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<Headers\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+          "\"\<content-type\>\"", "\[Rule]", 
+           "\"\<application/x-www-form-urlencoded;charset=UTF-8\>\""}], ",", 
+          RowBox[{
+          "\"\<user-agent\>\"", "\[Rule]", 
+           "\"\<Wolfram HTTPClient 11.1\>\""}]}], "}"}]}]}], "|>"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"URLRead", "[", "request", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImportString", "[", 
+  RowBox[{
+   RowBox[{"response", "[", "\"\<Body\>\"", "]"}], ",", "\"\<RawJSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7022066516007986`*^9, 3.7022067934495664`*^9}, {
+  3.7022074375227036`*^9, 3.7022075011940155`*^9}, {3.70220761363481*^9, 
+  3.7022076302732115`*^9}, {3.702207665555934*^9, 3.702207739269701*^9}, {
+  3.702207864594801*^9, 3.7022078718099203`*^9}, {3.702207963515291*^9, 
+  3.7022079870040126`*^9}},ExpressionUUID->"1187fa8b-bb3c-4697-bc00-\
+d005d281a8fd"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"status\"\>", "\[Rule]", "200"}], ",", 
+   RowBox[{"\<\"result\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"query\"\>", "\[Rule]", "\<\"M32 0JG\"\>"}], ",", 
+        RowBox[{"\<\"result\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"M32 0JG\"\>"}], ",", 
+           RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+           RowBox[{"\<\"eastings\"\>", "\[Rule]", "379988"}], ",", 
+           RowBox[{"\<\"northings\"\>", "\[Rule]", "395476"}], ",", 
+           RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+           RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"North West\"\>"}], ",", 
+           RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+            RowBox[{"-", "2.30283674284007`"}]}], ",", 
+           RowBox[{"\<\"latitude\"\>", "\[Rule]", "53.4556572899372`"}], ",", 
+           
+           RowBox[{"\<\"parliamentary_constituency\"\>", 
+            "\[Rule]", "\<\"Stretford and Urmston\"\>"}], ",", 
+           
+           RowBox[{"\<\"european_electoral_region\"\>", 
+            "\[Rule]", "\<\"North West\"\>"}], ",", 
+           
+           RowBox[{"\<\"primary_care_trust\"\>", 
+            "\[Rule]", "\<\"Trafford\"\>"}], ",", 
+           RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"North West\"\>"}], ",", 
+           RowBox[{"\<\"lsoa\"\>", "\[Rule]", "\<\"Trafford 003C\"\>"}], ",", 
+           RowBox[{"\<\"msoa\"\>", "\[Rule]", "\<\"Trafford 003\"\>"}], ",", 
+           RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"0JG\"\>"}], ",", 
+           RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"M32\"\>"}], ",", 
+           RowBox[{"\<\"admin_district\"\>", "\[Rule]", "\<\"Trafford\"\>"}], 
+           ",", 
+           
+           RowBox[{"\<\"parish\"\>", 
+            "\[Rule]", "\<\"Trafford, unparished area\"\>"}], ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "Null"}], ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Gorse Hill\"\>"}], 
+           ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Trafford\"\>"}], ",", 
+           
+           RowBox[{"\<\"nuts\"\>", 
+            "\[Rule]", "\<\"Greater Manchester South West\"\>"}], ",", 
+           RowBox[{"\<\"codes\"\>", "\[Rule]", 
+            RowBox[{"\[LeftAssociation]", 
+             RowBox[{
+              
+              RowBox[{"\<\"admin_district\"\>", 
+               "\[Rule]", "\<\"E08000009\"\>"}], ",", 
+              
+              RowBox[{"\<\"admin_county\"\>", 
+               "\[Rule]", "\<\"E99999999\"\>"}], ",", 
+              RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05000829\"\>"}], 
+              ",", 
+              RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E43000163\"\>"}], ",", 
+              RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000187\"\>"}], ",", 
+              RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKD34\"\>"}]}], 
+             "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}]}], 
+       "\[RightAssociation]"}], ",", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+        RowBox[{"\<\"query\"\>", "\[Rule]", "\<\"OX49 5NU\"\>"}], ",", 
+        RowBox[{"\<\"result\"\>", "\[Rule]", 
+         RowBox[{"\[LeftAssociation]", 
+          RowBox[{
+           RowBox[{"\<\"postcode\"\>", "\[Rule]", "\<\"OX49 5NU\"\>"}], ",", 
+           RowBox[{"\<\"quality\"\>", "\[Rule]", "1"}], ",", 
+           RowBox[{"\<\"eastings\"\>", "\[Rule]", "464440"}], ",", 
+           RowBox[{"\<\"northings\"\>", "\[Rule]", "195671"}], ",", 
+           RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"England\"\>"}], ",", 
+           RowBox[{"\<\"nhs_ha\"\>", "\[Rule]", "\<\"South Central\"\>"}], 
+           ",", 
+           RowBox[{"\<\"longitude\"\>", "\[Rule]", 
+            RowBox[{"-", "1.06986930435083`"}]}], ",", 
+           RowBox[{"\<\"latitude\"\>", "\[Rule]", "51.656143706615`"}], ",", 
+           RowBox[{"\<\"parliamentary_constituency\"\>", 
+            "\[Rule]", "\<\"Henley\"\>"}], ",", 
+           
+           RowBox[{"\<\"european_electoral_region\"\>", 
+            "\[Rule]", "\<\"South East\"\>"}], ",", 
+           
+           RowBox[{"\<\"primary_care_trust\"\>", 
+            "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+           RowBox[{"\<\"region\"\>", "\[Rule]", "\<\"South East\"\>"}], ",", 
+           
+           RowBox[{"\<\"lsoa\"\>", 
+            "\[Rule]", "\<\"South Oxfordshire 011B\"\>"}], ",", 
+           
+           RowBox[{"\<\"msoa\"\>", 
+            "\[Rule]", "\<\"South Oxfordshire 011\"\>"}], ",", 
+           RowBox[{"\<\"incode\"\>", "\[Rule]", "\<\"5NU\"\>"}], ",", 
+           RowBox[{"\<\"outcode\"\>", "\[Rule]", "\<\"OX49\"\>"}], ",", 
+           
+           RowBox[{"\<\"admin_district\"\>", 
+            "\[Rule]", "\<\"South Oxfordshire\"\>"}], ",", 
+           
+           RowBox[{"\<\"parish\"\>", 
+            "\[Rule]", "\<\"Brightwell Baldwin\"\>"}], ",", 
+           RowBox[{"\<\"admin_county\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}],
+            ",", 
+           RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"Chalgrove\"\>"}], 
+           ",", 
+           RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"NHS Oxfordshire\"\>"}], ",", 
+           RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"Oxfordshire\"\>"}], ",", 
+           RowBox[{"\<\"codes\"\>", "\[Rule]", 
+            RowBox[{"\[LeftAssociation]", 
+             RowBox[{
+              
+              RowBox[{"\<\"admin_district\"\>", 
+               "\[Rule]", "\<\"E07000179\"\>"}], ",", 
+              
+              RowBox[{"\<\"admin_county\"\>", 
+               "\[Rule]", "\<\"E10000025\"\>"}], ",", 
+              RowBox[{"\<\"admin_ward\"\>", "\[Rule]", "\<\"E05009735\"\>"}], 
+              ",", 
+              RowBox[{"\<\"parish\"\>", "\[Rule]", "\<\"E04008109\"\>"}], ",", 
+              RowBox[{"\<\"ccg\"\>", "\[Rule]", "\<\"E38000136\"\>"}], ",", 
+              RowBox[{"\<\"nuts\"\>", "\[Rule]", "\<\"UKJ14\"\>"}]}], 
+             "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]}]}], 
+       "\[RightAssociation]"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.702207504409036*^9, {3.7022076212804327`*^9, 3.702207630920921*^9}, {
+   3.7022076685758643`*^9, 3.702207681744608*^9}, {3.7022077132849417`*^9, 
+   3.702207741627691*^9}, 3.7022078729011517`*^9, {3.7022079748751307`*^9, 
+   3.702207987938614*^9}},ExpressionUUID->"4a602897-2011-412a-b0a2-\
+a310be614069"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 753},
+WindowMargins->{{208, Automatic}, {62, Automatic}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 153, 3, 101, "Title", "ExpressionUUID" -> \
+"22a31bd6-37d0-4c13-8010-854f1777f1d2"],
+Cell[CellGroupData[{
+Cell[758, 29, 727, 18, 88, "Input", "ExpressionUUID" -> \
+"aa0544f7-e2da-4ac9-94ca-a23cb148b75f"],
+Cell[1488, 49, 2795, 53, 202, "Output", "ExpressionUUID" -> \
+"b0811946-5d35-4739-93c0-9038a6659d92"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4320, 107, 1661, 40, 164, "Input", "ExpressionUUID" -> \
+"1187fa8b-bb3c-4697-bc00-d005d281a8fd"],
+Cell[5984, 149, 6530, 131, 392, "Output", "ExpressionUUID" -> \
+"4a602897-2011-412a-b0a2-a310be614069"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
